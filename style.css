@@ -28,7 +28,8 @@ body::-webkit-scrollbar {
 }
 
 .sugerir_abrir_cuenta__titulo {
-    font-size: 1.25em;
+    font-size: 1.15em;
+    opacity: 85%;
 }
 
 .sugerir_abrir_cuenta__boton {
@@ -251,8 +252,8 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 35px 85px 30px;
-  font-size: 1em;
+  padding: 35px 85px 20px;
+  font-size: 0.9em;
 }
 
 .header__lista__boton {
@@ -506,7 +507,7 @@ body::-webkit-scrollbar {
     grid-column: 1 / -1;
     padding: 1px 0 9px 0;
     margin: 4px 2px 0px 5px;
-    font-size: 1.07em;
+    font-size: 1.05em;
     border: none;
     border-bottom: 1px solid #1c1c1c33;
     color: #1c1c1cc8;
@@ -539,7 +540,7 @@ body::-webkit-scrollbar {
 .articulo_catalogo__titulo {
     padding: 1px 0 9px 0;
     margin: 4px 2px 0px 5px;
-    font-size: 1.07em;
+    font-size: 1.05em;
     border: none;
     border-bottom: 1px solid #1c1c1c33;
     color: #1c1c1cc8;
@@ -548,7 +549,7 @@ body::-webkit-scrollbar {
 .articulo_catalogo__span {
     color: #094;
     margin: 0 1px 0 0;
-    font-size: 0.9em;
+    font-size: 0.85em;
     z-index: 10;
 }
 
@@ -584,8 +585,8 @@ body::-webkit-scrollbar {
 .catalogito__div__titulo {
     font-weight: 500;
     padding: 0;
-    margin: 0 0 10px 0;
-    font-size: 0.98em;
+    margin: 0 0 7px 0;
+    font-size: 0.94em;
     width: 95%;
     text-wrap: pretty;
 }
@@ -593,7 +594,7 @@ body::-webkit-scrollbar {
 .catalogito__div__s {
     font-size: 0.85em;
     opacity: 65%;
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
     padding: 0;
 }
 
@@ -609,7 +610,7 @@ body::-webkit-scrollbar {
 }
 
 .cuadradito__span__cuotas {
-    font-size: 0.75em;
+    font-size: 0.78em;
 }
 
 .ver_mas_catalogo {
@@ -688,6 +689,7 @@ body::-webkit-scrollbar {
 }
 
 .footer__copyright {
+    max-width: 100%;
     color: #ddd;
     padding: 10px 25px;
     margin: 20px 0 5px;
