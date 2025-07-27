@@ -1,7 +1,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 13px;
     background: #efefef;
     text-wrap: balance;
     font-family: "Work Sans", sans-serif;
@@ -14,7 +14,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-/* Crear cuenta / Publicidad / Donacion */
+/* ---- Sugerir Crear cuenta ---- */
 
 .sugerir_abrir_cuenta {
     text-align: center;
@@ -61,34 +61,7 @@ body::-webkit-scrollbar {
     color: #0af;
 }
 
-.publicidad {
-    margin: 10px;
-    background: #fff;
-    padding: 10px 10px 5px;
-    box-shadow: 0 0 2px #1c1c1c55;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: #1c1c1cc8;
-    
-}
-
-.publicidad__contenido {
-    text-align: center;
-    justify-content: space-between;
-    margin: 12px 0 4px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-}
-
-.publicidad__item {
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 0 2px #1c1c1c55;
-    cursor: pointer;
-}
-
-/* Cookies */
+/* ---- Cookies ---- */
 
 .cookies {
     font-size: 1em;
@@ -143,7 +116,7 @@ body::-webkit-scrollbar {
     width: 49%;
 }
 
-/* Header */
+/* ---- Header ---- */
 
 #header-box {
     background: linear-gradient(#2D033B 50%, #efefef);
@@ -231,13 +204,13 @@ body::-webkit-scrollbar {
     fill: #fff;
 }
 
-/* Lista despliegable */
+/* ---- Lista despliegable ---- */
 
 .header__lista {
   display: none;
   padding: 60px 0 20px;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   position: fixed;
   background: #2D033b;
   z-index: 15;
@@ -343,8 +316,73 @@ body::-webkit-scrollbar {
     border-radius: 15px;
 }
 
+/* ---- Vista desde computadora ---- */
 
-/*Body Carrusel*/
+.header__computer {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 0 10px;
+}
+
+#header__computer__input {
+    margin: 0 10px;
+    padding: 5px 170px 5px 15px;
+    text-align: start;
+}
+
+.header__computer__ul {
+    display: inline;
+    padding: 0 50px;
+}
+
+.header__computer__ul li {
+    display: inline;
+    list-style: none;
+    padding: 0 7px;
+}
+
+.header__computer__a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease, padding 0.2s ease, border-bottom 0.2s ease;
+}
+
+.header__computer__a:hover {
+    color: #0af;
+    padding: 0 0 4px;
+    border-bottom: 1px solid #0af;
+}
+
+.header__computer__svg, .nav__carrito__svg {
+    border-radius: 5px;
+    border: none;
+    width: 26px;
+    height: 26px;
+    margin: auto;
+    margin: 2px 5px 0 9px;
+}
+
+.header__computer__svg, .nav__carrito__svg path {
+    fill: #fff;
+}
+
+@media screen and (min-width: 500px){
+    .header__computer {
+        display: flex;
+    }
+    .nav__carrito {
+        display: none;
+    }
+    #abrir_lista {
+        display: none;
+    }
+    
+}
+
+/* ---- Body Carrusel ---- */
 
 .carousel {
     display: flex;
@@ -406,7 +444,7 @@ body::-webkit-scrollbar {
     z-index: 10;
 }
 
-/* Artículos */
+/* ---- Artículos ---- */
 
 .articulo_cuadrado {
     box-sizing: border-box;
@@ -416,8 +454,8 @@ body::-webkit-scrollbar {
     box-shadow: 0 0 2px #1c1c1c55;
     border-radius: 4px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0px 8px;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    gap: 0 8px;
 }
 
 .cuadradito {
@@ -428,6 +466,13 @@ body::-webkit-scrollbar {
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
+    transition: opacity 0.3s ease, transform, box-shadow 0.3s ease-in-out !important
+}
+
+.cuadradito:hover {
+    opacity: 75%;
+    transform: translateY(-4px) scale(1)!important;
+    box-shadow: 0 0 3px rgba(0,0,0,0.4)!important
 }
 
 .cuadradito__img {
@@ -500,7 +545,7 @@ body::-webkit-scrollbar {
     margin: 0;
 }
 
-/* Conjunto */
+/* ---- Conjunto ---- */
 
 :is(.articulo_cuadrado__titulo,
 .publicidad__titulo) {
@@ -513,20 +558,11 @@ body::-webkit-scrollbar {
     color: #1c1c1cc8;
 }
 
-:is(.cuadradito, .publicidad__item, .all_catalogo__div__item) {
-    transition: transform, box-shadow 0.3s ease-in-out !important
-}
-
-:is(.cuadradito, .publicidad__item, .all_catalogo__div__item):hover {
-    transform: translateY(-4px) scale(1)!important;
-    box-shadow: 0 0 3px rgba(0,0,0,0.4)!important
-}
-
 :is(.ver_mas_catalogo, .ver_mas_cuadrado):hover {
     color: #09f;
 }
 
-/* Ofertas */
+/* ---- Ofertas ---- */
 
 .articulo_catalogo {
     box-sizing: border-box;
@@ -553,16 +589,23 @@ body::-webkit-scrollbar {
     z-index: 10;
 }
 
+.contenedor--catalogito {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 0 8px;
+}
+
 .catalogito {
     box-sizing: border-box;
     border-bottom: 1px solid #1c1c1c33;
     cursor: pointer;
     border-radius: 4px;
-    transition: transform 0.3s ease-in-out !important
+    transition: opacity 0.3s ease, transform 0.3s ease-in-out !important
 }
 
 .catalogito:hover {
     transform: translateX(5px) scale(1)!important;
+    opacity: 75%;
 }
 
 .catalogito__div {
@@ -580,6 +623,8 @@ body::-webkit-scrollbar {
     width: 29%;
     border-radius: 4px;
     margin: 14px 15px 9px 5px;
+    position: relative;
+    right: 0;
 }
 
 .catalogito__div__titulo {
@@ -644,7 +689,70 @@ body::-webkit-scrollbar {
     margin: 0;
 }
 
-/* footer */
+/* ---- Promociones tarjeta ---- */
+
+.contenedor--oferta--general {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3px;
+}
+
+.oferta--general {
+    box-sizing: border-box;
+    margin: 4px 10px;
+    background: #fff;
+    box-shadow: 1px 1px 3px #1c1c1c55;
+    border-radius: 4px;
+    display: flex;
+}
+
+.oferta--general--div {
+    width: 55%;
+    padding: 5px 10px;
+    height: auto;
+    position: relative;
+    border-radius: 4px 0 0 4px;
+}
+
+.oferta--general--div h5 {
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 13px 3px 5px;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.oferta--general--div h3 {
+    font-weight: 500;
+    padding: 5px 3px 20px;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.oferta--general--div--link {
+    text-decoration: none;
+    color: #08f;
+    position: absolute;
+    bottom: 15px;
+    font-size: 0.95em;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    padding-left: 3px;
+    transition: color 0.2s ease;
+}
+
+.oferta--general--div--link:hover {
+    color: #0af;
+}
+
+.oferta--general img {
+    width: 45%;
+    border-radius: 0 4px 4px 0;
+}
+/* ---- footer ---- */
 
 .footer {
     background: #2D033b;
@@ -693,4 +801,5 @@ body::-webkit-scrollbar {
     color: #ddd;
     padding: 10px 25px;
     margin: 20px 0 5px;
+    font-size: 0.9em;
 }
